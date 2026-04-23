@@ -19,20 +19,32 @@
 <!-- Fundo da BODY inteira de outra cor -->
 <body class="fundo-principal">
 
-  <header class="cabecalho container-fluid d-flex justify-content-between align-items-center p-3 sticky-top">
+  <header class="cabecalho container-fluid p-3 sticky-top">
+  <div class="d-flex justify-content-between align-items-center">
     <h1 class="game">GAME<strong class="store">STORE</strong></h1>
 
-    <nav class="menu d-flex align-items-center">
-      <a href="#">Início</a>
-      <a href="#">Jogos</a>
-      <a href="#">Ofertas</a>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit"> <i class="bi bi-search ms-3"></i> </button>
-      </form>
-      <i class="bi bi-cart ms-3"></i>
-    </nav>
-  </header>
+    <!-- BOTÃO MOBILE -->
+    <button class="btn d-md-none" data-bs-toggle="collapse" data-bs-target="#menuMobile">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+
+  <!-- MENU -->
+  <nav id="menuMobile" class="collapse d-md-flex justify-content-end align-items-center mt-3 mt-md-0">
+    <a href="#" class="me-3">Início</a>
+    <a href="#" class="me-3">Jogos</a>
+    <a href="#" class="me-3">Ofertas</a>
+
+    <form class="d-flex my-2 my-md-0">
+      <input class="form-control me-2" type="search" placeholder="Pesquisar"/>
+      <button class="btn btn-outline-success" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+
+    <i class="bi bi-cart ms-md-3"></i>
+  </nav>
+</header>
 
   <!-- BANNER -->
 <div id="carouselExampleIndicators" class="carousel slide style="height: 50rem;">
@@ -66,39 +78,42 @@
 
 <div class="container-fluid ">
 
-  <div class="container"> <h1> <i class="bi bi-trophy-fill"></i> Jogos em Destaque </h1>
-    <div class="row">
-      <div class="col-12">
+ <div class="container">
+  <h1><i class="bi bi-trophy-fill"></i> Jogos em Destaque</h1>
 
-        <!-- CARD 1 -->
-        <div class="row">
-          <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
-            <div class="card" style="width: 15rem; height: 25rem;"> <!-- tamanho do card-->
-              <img src="src/imagens/GTA - 6.jpg" height="300px" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center"> Grand Theft Auto VI </h5>
-                <p class="card-text"> <ul><li> Ação-aventura </li>
-                                      <li> Mundo aberto </li></ul> </p>
-                <a href="#" class="btn btn-primary"> Comprar </a>
-                <a href="#" class="btn btn-primary"> <i class="bi bi-cart ms-0"></i> </a>
-              </div>
-            </div>
-          </div>
+  <div class="row g-3">
+    
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100">
+        <img src="src/imagens/GTA - 6.jpg" class="card-img-top img-fluid" alt="">
+        <div class="card-body text-center">
+          <h5>GTA VI</h5>
+          <ul class="text-start">
+            <li>Ação</li>
+            <li>Mundo aberto</li>
+          </ul>
+          <a href="#" class="btn btn-primary w-100">Comprar</a>
+        </div>
+      </div>
+    </div>
 
-          <!-- CARD 2 -->
-          <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
-            <div class="card" style="width: 15rem; height: 25rem;"> <!-- tamanho do card-->
-              <img src="src/imagens/KRATOS E ATREUS 1.jpg" height="900px" class="card-img-fluid" alt="kratos">
-              <div class="card-body">
-                <h5 class="card-title text-center">God Of War Ragnarok</h5>
-                <p class="card-text"> <ul><li> Ação-aventura </li>
-                                          <li> Mundo aberto </li></ul> </p>
-                <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-              </div>
-            </div>
-          </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100">
+        <img src="src/imagens/KRATOS E ATREUS 1.jpg" class="card-img-top img-fluid" alt="">
+        <div class="card-body text-center">
+          <h5>God of War</h5>
+          <ul class="text-start">
+            <li>Ação</li>
+            <li>Aventura</li>
+          </ul>
+          <a href="#" class="btn btn-primary w-100">Comprar</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
           <!-- CARD 3 -->
-          <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card" style="width: 15rem; height: 25rem;"> <!-- tamanho do card-->
               <img src="src/imagens/ASSASIN.jpg" height="300px" class="card-img-fluid" alt="assassins">
               <div class="card-body">
@@ -110,7 +125,7 @@
             </div>
           </div>
           <!-- CARD 4 -->
-          <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card" style="width: 15rem; height: 25rem"> <!-- tamanho do card-->
               <img src="src/imagens/HOGWARTS.jpg" height="300px" class="card-img-top" alt="hogwarts">
               <div class="card-body">
@@ -134,10 +149,11 @@
                 <div class="row">
                   <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
                     <div class="card" style="width: 15rem; height: 25rem"> <!-- tamanho do card-->
-                      <img src="src/imagens/HOGWARTS.jpg" height="300px" class="card-img-top" alt="hogwarts">
+                      <img src="src/imagens/THE WITCHER.png" height="300px" class="card-img-top" alt="thewitcher">
                       <div class="card-body">
-                        <h5 class="card-title"> HOGWARTS </h5>
-                        <p class="card-text"></p>
+                        <h5 class="card-title"> The Witcher 3: Wild Hunt </h5>
+                        <p class="card-text"> <ul><li> RPG </li>
+                                                  <li> Combate </li></ul> </p>
                         <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
                       </div>
                     </div>
@@ -145,10 +161,11 @@
                   <!-- CARD 6 -->
                   <div class="col-12 clo-sm-6 col-md-3 col-lg-3">
                     <div class="card" style="width: 15rem; height: 25rem"> <!-- tamanho do card-->
-                      <img src="src/imagens/HOGWARTS.jpg" height="300px" class="card-img-top" alt="hogwarts">
+                      <img src="src/imagens/Call of Duty  telefon wallpaper.jpg" height="300px" class="card-img-top" alt="hogwarts">
                       <div class="card-body">
-                        <h5 class="card-title"> HOGWARTS </h5>
-                        <p class="card-text"></p>
+                        <h5 class="card-title"> CYBERPUNK </h5>
+                        <p class="card-text"> <ul><li> RPG </li>
+                                                  <li> Combate </li></ul> </p>
                         <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
                       </div>
                     </div>
